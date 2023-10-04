@@ -10,8 +10,11 @@
     text-decoration: none;
 }
 
+
 body {
-    background-color: rgba(233, 240, 245, 1);
+    position: relative;
+    margin: auto;
+    background-color: rgba(233, 240, 245, 1);    
 }
 
 .header-flex {
@@ -20,6 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 }
 
 .header-flex .header-knapper a {
@@ -40,7 +44,7 @@ body {
 
 
 .header-flex .logo {
-    padding: 0 0 0 50px;
+    padding-left: 100px;
 }
 
 .header-flex .logo a {
@@ -51,15 +55,24 @@ body {
     z-index: -1;
     background-color: rgba(247, 70, 161, 1);
     width: 70%;
+    transition: 0.2s ease-in-out;
+}
+
+.left a {
     color: rgba(233, 240, 245, 1);
 }
 
 .right {
     z-index: -2;
-    left: 53%;
+    left: 48%;
     background-color: rgb(253, 182, 219);
     padding-left: 20px;
     width: 60%;
+    transition: 0.2s ease-in-out;
+}
+
+.right a {
+    padding-left: 14px;
 }
 
 .container {
@@ -67,8 +80,7 @@ body {
     position: relative;
     width: 230px;
     height: 50px;
-    margin-right: 80px;
-    
+    margin-right: 130px;
 }
 
 .container>div {
@@ -80,11 +92,11 @@ body {
 }
 
 .container>.left:hover {
-    background-color: rgb(99, 50, 75);
+    background-color: rgb(255, 0, 132);
 }
 
 .container>.right:hover {
-    background-color: rgba(247, 70, 161, 1);
+    background-color: rgb(255, 27, 145);
 }
 
 .container>div>a {
@@ -94,11 +106,77 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50px;
-
 }
 
 .header-flex .active {
     color: rgba(18, 168, 244, 1);
     box-shadow: 0px 2px 0px rgb(18, 168, 244);
     transition: 0.2s ease-in-out;
+}
+
+
+.hero{
+    height: calc(100vh - 140px);
+    display: flex;
+    justify-content: space-between ;
+}
+
+.tekstHjemmeside{
+    display: flex;
+    flex-direction: column;
+    margin: 20vh 0px 0px 100px;
+
+}
+
+.overskriftHjemmeside{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.tekstLitenHjemmeside{
+    width: 30vw;
+}
+
+.hero div {
+    height: inherit;
+    width: auto;
+}
+
+.hero div .img {
+    width: auto;
+    height: calc(80vh - 140px);
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+
+
+@media screen and (min-width: 1920px) {
+    body {
+        max-width: 1920px;
+    } 
+}
+
+
+@media screen and (min-width: 2560px ) {
+
+    body {
+        max-width: 2560px;
+    }
+
+    .header-flex .header-knapper a {
+        margin: 0 150px;
+        font-size: 30px;
+    }
+
+    .container {
+        width: 340px;
+        height: 70px;
+    }
+    
+    .container>div>a {
+        font-size: 30px;
+    }
+
 }
