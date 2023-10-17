@@ -27,6 +27,8 @@ body {
 }
 
 .header-flex .header-knapper a {
+    width: fit-content;
+    height: fit-content;
     margin: 0 100px 0 100px;
     font-size: 20px;
     transition: 0.2s ease-in-out;
@@ -36,12 +38,11 @@ body {
     box-shadow: 0px 2px 0px rgba(233, 240, 245, 1);
 }
 
-.header-flex .header-knapper a:hover {
+.header-flex .header-knapper .not-active:hover{
     color: rgb(18, 168, 244);
     box-shadow: 0px 2px 0px rgb(18, 168, 244);
     transition: 0.2s ease-in-out;
 }
-
 
 .header-flex .logo {
     margin-left: 100px;
@@ -83,7 +84,7 @@ body {
     margin-right: 130px;
 }
 
-.container>div {
+.container div {
     top: 0;
     position: absolute;
     height: 100%;
@@ -91,12 +92,12 @@ body {
     
 }
 
-.container>.left:hover {
+.container .left:hover {
     background-color: rgb(255, 0, 132);
 }
 
-.container>.right:hover {
-    background-color: rgb(255, 27, 145);
+.container .right:hover {
+    background-color: rgb(255, 0, 132);
 }
 
 .container>div>a {
@@ -116,6 +117,7 @@ body {
 
 
 .hero{
+    background-color: rgba(233, 240, 245, 1);
     height: calc(100vh - 140px);
     display: flex;
     justify-content: space-between ;
@@ -139,7 +141,7 @@ body {
     width: 30%;
 }
 
-.hero div {
+.hero .tekstHjemmeside {
     height: 100%;
     width: auto;
 }
@@ -149,12 +151,78 @@ body {
     height: calc(80vh - 140px);
     position: absolute;
     right: 50px;
-    bottom: 27px;
+    top: calc(100vh - (80vh - 100px));
+
+}
+
+/*
+.imgBox {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    box-shadow: 100px 100px 20px rgb(0, 0, 0);
+    right: 300px;
+    top: calc(100vh - (60vh - 100px));
+}
+*/
+
+.footer {
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(233, 240, 245, 1);
+    background-image: linear-gradient(to bottom right, rgba(18, 169, 244, 1), rgba(247, 70, 161, 0.5));
+}
+
+.footer-left {
+    margin-left: 100px;
+}
+
+.footer-middle {
+    padding-top: 100px;
+}
+
+.footer-right {
+    margin-right: 100px;
 }
 
 
+.rESpOnsIvT-DesIGn {
+    z-index: -100;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    height: 100lvh;
+    width: 100vw;
+    background-color: rgba(233, 240, 245, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+@media screen and (max-width: 1301px) {
+    *{
+        overflow: hidden;
+    }
+    .rESpOnsIvT-DesIGn {
+        opacity: 1;
+        z-index: 100;
+        overflow: hidden;
+    }
+}
 
+@media screen and (max-height: 700px) {
+    .rESpOnsIvT-DesIGn {
+        opacity: 1;
+        z-index: 100;
+    }
+    *{
+        overflow: hidden;
+    }
+}
 
 @media screen and (min-width: 1920px) {
     body {
@@ -204,6 +272,6 @@ TODO:
 - 1224 er minste siden funker på, start telefongreier der
 - 4k - oppløsning med max-width og shit
 - Knapp til hjemmesiden
-- footer
+- skygge til mannen
 
 */
